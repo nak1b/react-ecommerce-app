@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { selectCartItemsCount } from '../../redux/cart/cart.selector'
+import { selectCartItemsCount } from '../../redux/cart/cart.selectors'
 import { toggleCartHidden } from '../../redux/cart/cart.actions'
 import { ReactComponent as ShoppingBag } from '../../assets/shopping-bag.svg'
 import './cart-icon.styles.scss'

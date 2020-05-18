@@ -8,11 +8,18 @@ import './cart-dropdown.styles.scss'
 
 const CartDropDown = ({cartItems}) => (
   <div className='cart-dropdown'>
-    <div className='cart-items'>
-      { cartItems.map(item => (
-        <CartItem key={item.id} item={item} />
-      ))}
-    </div>
+    { cartItems.length ? (
+        <div className='cart-items'>
+          { cartItems.map(item => (
+            <CartItem key={item.id} item={item} />
+          ))}
+        </div>
+      ) : (
+        <div className='empty-message'>
+          Your cart is empty
+        </div>
+      )
+    }
     <CustomButton>GO TO CHECKOUT</CustomButton>
   </div>
 )
